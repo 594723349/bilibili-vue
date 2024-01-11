@@ -1,0 +1,9 @@
+@import "normalize"; /* 页面标准化文件导入 */
+@import "element"; /* element */
+@import "transition";
+@import "global";
+
+.border_shadow {
+  box-shadow: 0 2px 4px rgb(0 0 0 / 0%), 0 0 6px rgb(0 0 0 / 20%);
+  border-radius: 5px;
+}

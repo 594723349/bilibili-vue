@@ -1,0 +1,101 @@
+@forward "element-plus/theme-chalk/src/common/var.scss" with (
+  $colors: (
+    'white': #ffffff,
+    'black': #000000,
+    "primary": (
+      "base": #0071ce,
+    ),
+    'success': (
+      'base': #19945a,
+    ),
+    'warning': (
+      'base': #ffbd1a,
+    ),
+    'danger': (
+      'base': #ed5565,
+    ),
+    'error': (
+      'base': #877cdd,
+    ),
+    'info': (
+      'base': #909399,
+    ),
+  )
+);
+
+@import "element-plus/theme-chalk/src/index.scss";
+
+// 修复 消息确认弹窗样式
+.el-message-box__status {
+  position: absolute !important;
+}
+// 修复 通知弹窗样式
+.el-notification {
+  &__icon {
+    height: var(--el-notification-icon-size)!important;
+    width: var(--el-notification-icon-size)!important;
+    font-size: var(--el-notification-icon-size)!important;
+  }
+  &--success, &--warning, &--info, &--error {
+    color: var(--el-notification-icon-color)!important;
+  }
+  &__closeBtn {
+    position: absolute !important;
+  }
+}
+
+.el-table__header {
+  thead {
+    tr {
+      th {
+        div {
+          font-size: 13px;
+          color:#415161;
+        }
+      }
+    }
+  }
+}
+.g-table {
+  .el-table__body-wrapper {
+    .el-table__body {
+      tbody {
+        tr {
+          td {
+            padding: 0;
+            & > div{
+              font-size: 1.15em;
+              line-height: 17px;
+              color:#415161;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.el-table__cell {
+  .el-button {
+    height: 26px;
+  }
+}
+
+.el-dialog__header {
+  padding: 10px!important;
+  margin-right: 0!important;
+  background: #e5e5e5;
+}
+.el-dialog__body {
+  padding-bottom: 10px!important;
+}
+.el-dialog__footer {
+  padding: 10px!important;
+  background: #e5e5e5;
+}
+
+.el-dialog__headerbtn {
+  top: 3px!important;
+  width: 44px!important;
+  height: 44px!important; 
+}
