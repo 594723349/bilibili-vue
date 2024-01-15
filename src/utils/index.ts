@@ -1,4 +1,4 @@
-import { MAPPING } from '@/utils/constant'
+import { VITE_ENV } from '@/utils/request/constant'
 
 /**
  * @description: 获取Api BaseUrl
@@ -8,8 +8,8 @@ import { MAPPING } from '@/utils/constant'
  */
 export function getApiBaseUrl() {
   const baseUrl =
-    process.env.VUE_APP_PROXY === 'true'
-      ? `/proxy${MAPPING}`
-      : process.env.VUE_APP_BASE_API + MAPPING
+    import.meta.env.VITE_NODE_ENV === 'development'
+      ? VITE_ENV.VITE_PROXY[VITE_ENV.VITE_API_URL]
+      : VITE_ENV.VITE_API_URL+VITE_ENV.VITE_API_PORT
   return baseUrl
 }

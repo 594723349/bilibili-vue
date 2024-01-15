@@ -23,7 +23,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 
@@ -42,7 +42,7 @@ export default defineComponent({
       }
     })
 
-    const jump = (type) => {
+    const jump = (type:number) => {
       switch (type) {
         case 0:
           router.go(-1)
